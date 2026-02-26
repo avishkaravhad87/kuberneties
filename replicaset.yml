@@ -5,11 +5,11 @@ metadata:
   namespace: my-namespace
 spec:
   replicas: 2
-  matchlabels :
-    app: nginx
+  selector:
+    matchLabels:
+      app: nginx
 template:
   metadata:
-    name: nginx-rep-pod
-    lables:
+    labels:
       app: nginx
       
