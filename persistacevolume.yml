@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: persistentVolume
+metadat:
+  name: local-pv
+  app: local
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    -ReadWriteOnce
+  persistentVolumeReclaimPolicy: retain
+  storageClassName: local-storage
+  hostPath:
+    path: /mnt/data
+    
